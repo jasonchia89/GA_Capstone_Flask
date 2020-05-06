@@ -1,0 +1,28 @@
+<!doctype html>
+<title>Outcome of Recommendations</title>
+<div class=page>
+  <h6>Given the ratings you have provided for some of the outlets below,</h6><br>
+  <h6>Outlet: {{shop1}}, Rating Given: {{rate1}}</h6>
+  <h6>Outlet: {{shop2}}, Rating Given: {{rate2}}</h6>
+  <h6>Outlet: {{shop3}}, Rating Given: {{rate3}}</h6>
+  <h6>Outlet: {{shop4}}, Rating Given: {{rate4}}</h6>
+  <h6>Outlet: {{shop5}}, Rating Given: {{rate5}}</h6>
+  <h6>Outlet: {{shop6}}, Rating Given: {{rate6}}</h6>
+  <h6>Outlet: {{shop7}}, Rating Given: {{rate7}}</h6>
+  <h6>Outlet: {{shop8}}, Rating Given: {{rate8}}</h6>
+  <h6>Outlet: {{shop9}}, Rating Given: {{rate9}}</h6>
+  <h6>Outlet: {{shop10}}, Rating Given: {{rate10}}</h6>
+  <br>
+  <br>
+  <h1>We recommend these top 5 for you to check out!</h1>
+  {% set first_url = 'https://www.yelp.com/biz/' + first %}
+  {% set second_url = 'https://www.yelp.com/biz/' + second %}
+  {% set third_url = 'https://www.yelp.com/biz/' + third %}
+  {% set fourth_url = 'https://www.yelp.com/biz/' + fourth %}
+  {% set fifth_url = 'https://www.yelp.com/biz/' + fifth %}
+    <h1>Top: <a href={{first_url}} target="_blank">{{first}}</a></h1>
+    <h2>2nd: <a href={{second_url}} target="_blank">{{second}}</a></h2>
+    <h3>3rd: <a href={{third_url}} target="_blank">{{third}}</a></h3>
+    <h4>4th: <a href={{fourth_url}} target="_blank">{{fourth}}</a></h4>
+    <h5>5th: <a href={{fifth_url}} target="_blank">{{fifth}}</a></h5>
+</div>

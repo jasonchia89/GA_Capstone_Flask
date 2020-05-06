@@ -1,0 +1,193 @@
+<!doctype html>
+<title>GA DSI13 Capstone</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Singapore Coffee-Drinking Outlet Recommender (based on Yelp data)</h1>
+  <br>
+  <h2>Please refresh this page and rate/re-rate if you are a new user or submitting ratings and requesting for recommendations again respectively!</h2>
+
+  <h3>There are 5 rating classes: 1, 2, 3, 4, 5</h3>
+
+  <h3>Kindly provide ratings for 10 different outlets, 2 different outlets per rating class</h3>
+  {% block body %}
+    <form name="passdata" action="." method="post">
+      <fieldset>
+        <legend>Rate some outlets to begin!</legend>
+        <p>
+          <label for="shop1">Choose an outlet</label>
+          <select id = "shop1" name="shop1">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate1">Rate it</label>
+          <select id = "rate1" name="rate1">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop2">Choose an outlet</label>
+          <select id = "shop2" name="shop2">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate2">Rate it</label>
+          <select id = "rate2" name="rate2">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop3">Choose an outlet</label>
+          <select id = "shop3" name="shop3">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate3">Rate it</label>
+          <select id = "rate3" name="rate3">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop4">Choose an outlet</label>
+          <select id = "shop4" name="shop4">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate4">Rate it</label>
+          <select id = "rate4" name="rate4">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop5">Choose an outlet</label>
+          <select id = "shop5" name="shop5">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate5">Rate it</label>
+          <select id = "rate5" name="rate5">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop6">Choose an outlet</label>
+          <select id = "shop6" name="shop6">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate6">Rate it</label>
+          <select id = "rate6" name="rate6">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop7">Choose an outlet</label>
+          <select id = "shop7" name="shop7">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate7">Rate it</label>
+          <select id = "rate7" name="rate7">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop8">Choose an outlet</label>
+          <select id = "shop8" name="shop8">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate8">Rate it</label>
+          <select id = "rate8" name="rate8">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop9">Choose an outlet</label>
+          <select id = "shop9" name="shop9">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate9">Rate it</label>
+          <select id = "rate9" name="rate9">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select>
+          <br>
+          <br>
+          <label for="shop10">Choose an outlet</label>
+          <select id = "shop10" name="shop10">
+            {% for shop in list %}
+              <option value = {{shop}}>{{shop}}</option>
+            {% endfor %}
+          </select>
+          <br><label for="rate10">Rate it</label>
+          <select id = "rate10" name="rate10">
+            <option value = 1>1</option>
+            <option value = 2>2</option>
+            <option value = 3>3</option>
+            <option value = 4>4</option>
+            <option value = 5>5</option>
+          </select><br><br>
+          <input type="submit" value="Submit">
+        </p>
+      </fieldset>
+    </form>
+    <body>
+      <h1>Or you can check out the Yelp pages of some of these outlets before rating them!</h1>
+      <table style="width:100%">
+        <tr>
+          <th>Local Coffee-drinking Outlets</th>
+        </tr>
+        {% for k, v in url_alias %}
+          <tr>
+            <td><a href={{k}} target="_blank">{{v}}</a></td>
+          </tr>
+        {% endfor %}
+      </table>
+    </body>
+  {% endblock %}
+</div>
